@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
 
 import './App.css';
+import Input from './Components/input';
 
 class App extends React.Component {
     constructor(props) {
@@ -10,18 +11,18 @@ class App extends React.Component {
             testMessage: null
         }
     }
-    componentDidMount() {
-        fetch("http://localhost:3001/")
-            .then(response => response.json())
-            .then(data => 
-                this.setState({
-                    testMessage : data.message
-                })
-            )
-    }
+ //   componentDidMount() {
+ //       fetch("http://localhost:3001/")
+ //           .then(response => response.json())
+ //           .then(data => 
+ //               this.setState({
+ //                   testMessage : data.message
+ //               })
+ //           )
+ //   }
     render() {
         return (
-            <h1> { this.state.testMessage } </h1>
+            <Input message = { this.state.testMessage } />
         );
     }
 }
