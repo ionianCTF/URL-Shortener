@@ -12,12 +12,6 @@ admin.initializeApp({
 class Handler {
     static db = admin.database();
 
-    static initializeApp() {
-        return new Promise ((resolve, reject) => {
-
-        });
-    }
-
     static getData(child) {
         return new Promise((resolve, reject) => {
             try {
