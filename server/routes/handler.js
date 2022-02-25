@@ -35,7 +35,7 @@ class Handler {
                 var tempObj = {};
                 tempObj[id] = url;
                 ref.update(tempObj);
-                resolve({ success: true });
+                resolve({ url: base62.encode(id) });
             } catch (error) {
                 reject({ error : error });
             }
