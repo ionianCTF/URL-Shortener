@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 
 import './App.css';
 import Input from './Components/input.js';
 import Error from './Components/urlError.js';
 import Success from './Components/success.js';
+import Footer from './Components/footer.js';
 
 class App extends React.Component {
     constructor(props) {
@@ -56,6 +56,7 @@ class App extends React.Component {
                 <Form.Label className="display-1 fw-bold font-monospace">Short URL</Form.Label>
             </Form>
             {toRender}
+            <Footer />
             </div>
         );
     }
