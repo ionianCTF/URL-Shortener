@@ -18,7 +18,7 @@ router.get('/:url', (req, res) => {
     return new Promise((resolve, reject) => {
         try {
             Handler.getData('URLS/' + base62.decode(req.params.url))
-                .then((url) => { res.send({ url : url })});
+                .then((url) => { res.redirect('//' + url.replace("https://", '').replace("http://", ''))});
         } catch(error) {
             res.send({ error : error });
         }
